@@ -1,7 +1,25 @@
 # 光停在这一页 · 摄影手记
 
-A static photographic book by Caiyue Luo: 141 photographs arranged across 15 chapters, with page-turning interactions built in HTML, CSS, and JavaScript.
+[打开在线作品集](https://18148804361-alt.github.io/caiyue-photo-journal/)
 
-The site is published with GitHub Pages. Open `index.html` locally or visit the live Pages URL.
+罗彩月的静态摄影书作品集：141 幅照片，15 个章节。以可交互的书本形式呈现旅行记录。
+
+## 设计与实现
+
+- 用 HTML、CSS 和原生 JavaScript 构建，无后端依赖。
+- CSS 3D 书本、纸张与书脊效果，配合逐页翻阅动画。
+- 目录、主题筛选、照片大图浏览和键盘、触摸操作。
+- 响应式布局，并支持减少动态效果的系统偏好。
+- 摄影作品存放在 `images/`，首页入口为 `index.html`。
+
+## 本地预览
+
+在此目录运行：
+
+```sh
+python3 -m http.server 4175
+```
+
+然后打开 `http://localhost:4175/`。
 
 © 罗彩月。摄影作品未经许可，请勿转载或用于商业用途。
