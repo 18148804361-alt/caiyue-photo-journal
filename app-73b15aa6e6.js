@@ -4,7 +4,7 @@ const original=window.PHOTOS;const byId=new Map(original.map(p=>[p.id,p]));
 const allPhotos=[];const pageRecords=[];const pageForPhoto=new Map();let sheets=[],activePage=0,currentPhoto=0,lastFocus=null,contactTheme='全部',touchX=null,observed=new Map();
 const reduced=()=>matchMedia('(prefers-reduced-motion: reduce)').matches;
 function el(tag,text,cls){const e=document.createElement(tag);if(text!==undefined&&text!==null)e.textContent=text;if(cls)e.className=cls;return e}
-function imageButton(p){const b=el('button',null,'photo-slot');b.type='button';b.setAttribute('aria-label',`查看作品：${p.title}`);const img=el('img');img.src=p.thumb;img.srcset=`${p.thumb} 840w, ${p.src} 2200w`;img.sizes='(max-width:600px) 90vw, 80vw';img.width=p.width;img.height=p.height;img.alt=p.title;img.loading='lazy';img.decoding='async';b.append(img);b.onclick=()=>openPhoto(p.id);return b}
+function imageButton(p){const b=el('button',null,'photo-slot');b.type='button';b.setAttribute('aria-label',`查看作品：${p.title}`);const img=el('img');img.src=p.thumb;img.srcset=`${p.thumb} 840w, ${p.src} 2200w`;img.sizes='(max-width:600px) 44vw, 44vw';img.width=p.width;img.height=p.height;img.alt=p.title;img.loading='lazy';img.decoding='async';b.append(img);b.onclick=()=>openPhoto(p.id);return b}
 function folioPaper(photo,side,chapter,number){
  const paper=el('div',null,`folio-paper folio-${side}`);
  if(photo&&photo.width/photo.height<.9)paper.classList.add('has-portrait');
